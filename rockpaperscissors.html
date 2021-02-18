@@ -29,10 +29,11 @@
         
     }
 }
-    let izborIgraca = playerPlay();
-    let izborKompa = computerPlay();
+    // let izborIgraca = playerPlay();
+    // let izborKompa = computerPlay();
     // REZULTAT
     function playRound (izborIgraca, izborKompa) {
+        
         let rezultat
         if (izborIgraca === 'kamen' && izborKompa === 'papir') {
             return rezultat = 'Komp je papir! Izgubio si!'
@@ -69,8 +70,8 @@
              let bodoviKomp = 0
              let bodoviIgrac = 0
          for (let ponavljanje = 0; ponavljanje <= 4; ponavljanje++) {
-             izborIgraca = playerPlay();
-             izborKompa = computerPlay(); 
+             let izborIgraca = playerPlay();
+             let izborKompa = computerPlay(); 
              let rezultatRunde = playRound(izborIgraca, izborKompa);
              
             
