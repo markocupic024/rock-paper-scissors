@@ -1,0 +1,85 @@
+html { 
+    background: url(https://i.pinimg.com/originals/11/59/e8/1159e826f87e9b276ac61d4be71b3332.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 23px;
+    font-family: 'Gloria Hallelujah', sans-serif;
+  }
+
+header {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3.5em;
+    gap: 5em;
+
+}
+
+.buttons {
+    align-self: center;
+    justify-self: center;
+    margin: 50px;
+}
+
+#score {
+   align-self: center;
+   justify-self: center;
+
+}
+
+button {  
+    width: 250px; 
+    height: 250px;  
+    border-radius: 50%;
+    margin: 50px;
+    background-color: aliceblue;
+    outline: none;
+} 
+
+button:hover {
+    transform: scale(1.2);
+    border-color: goldenrod;
+}
+
+#papir {
+    background-image: url( 
+        https://raw.githubusercontent.com/parkercon/rock-paper-scissors/main/images/paper.png); 
+    background-size: 150px;
+    background-repeat: no-repeat;  
+    background-position: 40px 40px;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    bottom: 5em;
+}
+
+h1 {
+    font-weight: 500;
+    
+
+}
+
+#kamen {
+    background-image: url( 
+        https://raw.githubusercontent.com/parkercon/rock-paper-scissors/main/images/rock.png); 
+    background-size: 150px;
+    background-repeat: no-repeat;  
+    background-position: 40px 40px;
+}
+
+#makaze {
+    background-image: url( 
+        https://raw.githubusercontent.com/parkercon/rock-paper-scissors/main/images/scissors.png); 
+    background-size: 150px;
+    background-repeat: no-repeat;  
+    background-position: 40px 40px;
+}

@@ -1,3 +1,4 @@
+    // RADI ALI JE KOD KATASTROFA
     // COMPUTER PLAY FUNKCIJA
     function computerPlay() {
         let znakovi = ['kamen', 'papir', 'makaze'];
@@ -5,25 +6,73 @@
         let randomZnak = znakovi[randomBroj];
         return randomZnak;
     }
-    let izborKompa = computerPlay()
+    let bodoviKomp = 0
+    let bodoviIgrac = 0
     // ZA IGRACA
-    let kompBodovi = 0
-    let igracbodovi = 0
     const kamen = document.getElementById('kamen');
-    kamen.addEventListener('click', () => {console.log(playRound ('kamen', izborKompa))
-    const rezultatRunde = document.querySelector('p'); rezultatRunde.textContent = playRound ('kamen', izborKompa);
+    kamen.addEventListener('click', () => {let izborKompa = computerPlay() 
+    const rezultatRunde = document.querySelector('p');
+    let rezultatiRunde = playRound ('kamen', izborKompa);
+    if (rezultatiRunde === 'Komp je papir! Izgubio si!' || rezultatiRunde === 'Komp je makaze! Izgubio si!' || rezultatiRunde === 'Komp je kamen! Izgubio si!') {
+        bodoviKomp++;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+       
+    }
+    else if (rezultatiRunde === 'Komp je kamen! Pobedio si!' || rezultatiRunde === 'Komp je papir! Pobedio si!' || rezultatiRunde === 'Komp je makaze! Pobedio si!') {
+        bodoviIgrac++;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+        
+    }
+    else if (rezultatiRunde === 'Nereseno!') {
+        bodoviKomp;
+        bodoviIgrac;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+       
+    }
 });
     
     const papir = document.getElementById('papir');
-    papir.addEventListener('click', () => {console.log(playRound ('papir', izborKompa))
-    const rezultatRunde = document.querySelector('p'); rezultatRunde.textContent = playRound ('papir', izborKompa);
-   
+    papir.addEventListener('click', () => {let izborKompa = computerPlay() 
+    const rezultatRunde = document.querySelector('p'); 
+    let rezultatiRunde = playRound ('papir', izborKompa);
+    if (rezultatiRunde === 'Komp je papir! Izgubio si!' || rezultatiRunde === 'Komp je makaze! Izgubio si!' || rezultatiRunde === 'Komp je kamen! Izgubio si!') {
+        bodoviKomp++;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+       
+    }
+    else if (rezultatiRunde === 'Komp je kamen! Pobedio si!' || rezultatiRunde === 'Komp je papir! Pobedio si!' || rezultatiRunde === 'Komp je makaze! Pobedio si!') {
+        bodoviIgrac++;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+        
+    }
+    else if (rezultatiRunde === 'Nereseno!') {
+        bodoviKomp;
+        bodoviIgrac;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+       
+    }
 });
 
     const makaze = document.getElementById('makaze');
-    makaze.addEventListener('click', () => {console.log(playRound ('makaze', izborKompa))
-    const rezultatRunde = document.querySelector('p'); rezultatRunde.textContent = playRound ('makaze', izborKompa);
-    
+    makaze.addEventListener('click', () => {let izborKompa = computerPlay()
+    const rezultatRunde = document.querySelector('p'); 
+    let rezultatiRunde = playRound ('makaze', izborKompa);
+    if (rezultatiRunde === 'Komp je papir! Izgubio si!' || rezultatiRunde === 'Komp je makaze! Izgubio si!' || rezultatiRunde === 'Komp je kamen! Izgubio si!') {
+        bodoviKomp++;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+       
+    }
+    else if (rezultatiRunde === 'Komp je kamen! Pobedio si!' || rezultatiRunde === 'Komp je papir! Pobedio si!' || rezultatiRunde === 'Komp je makaze! Pobedio si!') {
+        bodoviIgrac++;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+        
+    }
+    else if (rezultatiRunde === 'Nereseno!') {
+        bodoviKomp;
+        bodoviIgrac;
+        rezultatRunde.textContent = `${rezultatiRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` 
+       
+    }
 });
 
     // REZULTAT
@@ -59,48 +108,4 @@
         }
     }
     
-  
-  
    
-    
-
-
-    // //  IGRA
-    //     let bodoviKomp = 0
-    //     let bodoviIgrac = 0
-    
-    //     let rezultatRunde = playRound();
-        
-       
-        // if (rezultatRunde === 'Komp je papir! Izgubio si!' || rezultatRunde === 'Komp je makaze! Izgubio si!' || rezultatRunde === 'Komp je kamen! Izgubio si!') {
-        //     bodoviKomp++;
-        //     console.log(`${rezultatRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` )
-           
-        // }
-        // else if (rezultatRunde === 'Komp je kamen! Pobedio si!' || rezultatRunde === 'Komp je papir! Pobedio si!' || rezultatRunde === 'Komp je makaze! Pobedio si!') {
-        //     bodoviIgrac++;
-        //     console.log(`${rezultatRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` )
-            
-        // }
-        // else if (rezultatRunde === 'Nereseno!') {
-        //     bodoviKomp;
-        //     bodoviIgrac;
-        //     console.log(`${rezultatRunde} Rezultat je: Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}` )
-           
-        // }
-        
-       
-    
-    // let rezultatIgre
-    // if (bodoviKomp > bodoviIgrac) {
-    // rezultatIgre = `Komp je pobedio! Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}`
-   
-    // }
-    // else if (bodoviIgrac > bodoviKomp) {
-    // rezultatIgre = `Ti si pobedio! Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}`
-      
-    // }
-    // else {
-    // rezultatIgre = `Nereseno! Tvoji Bodovi : ${bodoviIgrac} Komp bodovi : ${bodoviKomp}`
-   
-    // }
